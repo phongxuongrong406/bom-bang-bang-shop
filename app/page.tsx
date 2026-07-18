@@ -1,17 +1,14 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Categories from "../components/Categories";
-import ProductGrid from "../components/ProductGrid";
-import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import ProductGrid from "@/components/ProductGrid";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FFF8FB]">
-      <Navbar />
+    <>
+      {/* Banner chào mừng */}
       <Hero />
-      <Categories />
+      
+      {/* Danh sách sản phẩm bán chạy */}
       <ProductGrid />
-      <Footer />  
-    </main>
+    </>
   );
 }

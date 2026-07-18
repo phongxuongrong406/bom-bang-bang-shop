@@ -33,13 +33,6 @@ const products = [
     rating: 4,
     badge: "HOT",
   },
-  {
-    image: "/images/pearl-bracelet.jpg",
-    name: "Pearl Bracelet",
-    oldPrice: "160.000đ",
-    price: "129.000đ",
-    rating: 5,
-  },
 ];
 
 
