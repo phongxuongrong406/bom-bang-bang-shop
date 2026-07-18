@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 
 export default function CartDrawer() {
@@ -73,7 +73,7 @@ export default function CartDrawer() {
             )}
           </div>
 
-          {/* Phần tính tiền & Nút bấm thanh toán ở đáy */}
+          {/* Phần tính tiền & Nút bấm thanh toán gom hết vào trong block này */}
           {cart.length > 0 && (
             <div className="border-t border-gray-200 px-6 py-6 bg-gray-50 space-y-4">
               <div className="flex justify-between text-base font-bold text-gray-900">
@@ -81,9 +81,15 @@ export default function CartDrawer() {
                 <span className="text-xl text-pink-500">{getCartTotal()}</span>
               </div>
               <p className="text-xs text-gray-400">Phí vận chuyển sẽ được tính khi cậu điền địa chỉ nha.</p>
-              <button className="w-full rounded-full bg-pink-500 py-4 text-center text-base font-semibold text-white shadow-md hover:bg-pink-600 transition active:scale-95">
+              
+              {/* Chỉ giữ duy nhất thẻ Link này ở đây thôi cậu nhé */}
+              <Link 
+                href="/checkout"
+                onClick={() => setIsCartOpen(false)}
+                className="block w-full rounded-full bg-pink-500 py-4 text-center text-base font-semibold text-white shadow-md hover:bg-pink-600 transition active:scale-95"
+              >
                 Tiến hành thanh toán 🚀
-              </button>
+              </Link>
             </div>
           )}
 
