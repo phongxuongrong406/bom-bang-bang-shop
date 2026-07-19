@@ -7,8 +7,8 @@ export async function POST(request: Request) {
     const { items, customer, totalAmount } = body;
 
     // 📬 1. CẤU HÌNH EMAIL CỦA CẬU Ở ĐÂY:
-    const SHOP_EMAIL = "phamvuanhhang@gmail.com"; // Điền Gmail của cậu (Vừa dùng để gửi, vừa dùng để nhận đơn)
-    const GMAIL_APP_PASSWORD = "jduf yteb yekq okrq"; // Mật khẩu ứng dụng Gmail 16 ký tự (Xem hướng dẫn lấy ở dưới)
+    const SHOP_EMAIL = process.env.SHOP_EMAIL; // Điền Gmail của cậu (Vừa dùng để gửi, vừa dùng để nhận đơn)
+    const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD; // Mật khẩu ứng dụng Gmail 16 ký tự (Xem hướng dẫn lấy ở dưới)
 
     // 2. Tự động gom danh sách sản phẩm thành định dạng danh sách HTML
     let productListHtml = "";
